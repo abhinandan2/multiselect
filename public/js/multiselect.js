@@ -1,45 +1,425 @@
-// Abhinandan Shah - abhioxic
-function multiselect() {
+// 'Abhinandan Shah - abhioxic',
+function multiselect(selectedList) {
 
-   var json = [
-      {
-        title: "Asus",
-        code: "AS",
-        price: 200,
-      },
-      {
-        title: "Bsus",
-        code: "BS",
-        price: 300,
-      },
-      {
-        title: "Dsus",
-        code: "DS",
-        price: 100,
-      },
-   ]
- var selectedList = []
+var json = [
+ {
+   title: 'NGC People HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Fox life HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MTV Beats HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'NGC Music HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'TLC HD World',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Travel XP HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Baby tv HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'CNBC PRIME HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Nick HD +',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Axn HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Colors Infinity HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Comedy Central HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MN+ HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'ROMEDY NOW HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Sony PIX HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Movies HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Movies Select HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Sony MAX',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee Cinema',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Gold',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'UTV Movies',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'UTV Action',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'ZEE BOLLYWOOD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee Action ',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Movies OK',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: '& Pictures',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Sony MAX 2',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Movies',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Romedy Now ',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: '&FLIX',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Sony PIX',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Warner Brothers',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Movies Now',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MNX',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Colors',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Plus',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'STAR BHARAT',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Sony SAB TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'UTV Bindass',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: '& TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'DISCOVERY JEET ',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'AXN',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star World',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'ZEE Café',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Comedy Central',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Colors Infinity',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Cartoon Network',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MIRROR NOW',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Hungama',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Times Now',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'NICK',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'REPUBLIC TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Nick Junior',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'DISNEY',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'CNBC TV 18',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Disney XD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Disney Junior',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'SONY YAY',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'CNBC BAZAAR',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'ET Now',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'BABY TV SD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Discovery Kids',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee Business',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MTV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'VH1',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'CNBCAwaaz',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Aljazeera',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'JINVANI',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'France 24',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'SANSKRITI TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'PTC News',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'PTC Punjabi',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'NEWS18 PUN/HAR HIMACHAL',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Stv Haryana News',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: '9X Tashan',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Discovery ',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'MH-1 (SD)',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Ptc Chakde',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'NEWS 18 URDU',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee Salaam',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'CHANNEL WIN',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Colors Gujarati',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Discovery  Turbo',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Discovery  Science',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'EPIC TV',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'History tv 18',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'GEMPORIA',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'FYI TV 18',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Fox life',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Travel XP',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'TLC',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Living Foodz',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Nat Geo',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'ABP News',
+   code: 'DUMMY',
+   price: 25,
+ }
+]
+
  var node = document.getElementById("ul");
  json.forEach((currentValue, index) => {
   var li = document.createElement("li");
-  li.innerHTML = `<label name="` + currentValue.title + `" class="multiselect--li"><input on type="checkbox" class="multiselect--checkbox" name="` + currentValue.title + `" value="` + currentValue.code + `"><span>` + currentValue.title +  `</span><span> ` + currentValue.price + `</span></input></label>`
+  li.classList.add("multiselect--li")
+  li.innerHTML = `<label name="` + currentValue.title + `" class="multiselect--label"><input  type="checkbox" class="multiselect--checkbox" name="` + currentValue.title + `" value="` + currentValue.code + `"><span class="multiselect--title">` + currentValue.title +  `</span><span class="multiselect--price">₹ ` + currentValue.price + `</span></input></label>`
   node.appendChild(li);
  })
- var label = document.getElementsByClassName("multiselect--label");
+ var li = document.getElementsByClassName("multiselect--li");
  $('#multiselect--filter').on('input', function() { 
      console.log();
      var filter = $(this).val();
-     for(var i = 0; i < label.length; i++) { 
-        if(label[i].getAttribute('name').toUpperCase().indexOf(filter.toUpperCase()) > -1){
-          label[i].style.display = "";
+     for(var i = 0; i < li.length; i++) { 
+        if(li[i].childNodes[0].getAttribute('name').toUpperCase().indexOf(filter.toUpperCase()) > -1){
+          li[i].style.display = "";
         } else {
-          label[i].style.display = "none";
+          li[i].style.display = "none";
         }
       }
  });
   $(".multiselect--checkbox").change(function() {
       if(this.checked) {
-        debugger;
+        this.parentElement.classList.add("selected");
+        selectedList.push(this.value);
+      }
+      else {
+        this.parentElement.classList.remove("selected")
+        selectedList.pop(this.value)
+      }
+      if(selectedList < 1){
+        $("#multiselect_btn__agree").prop('disabled', true);
+        $("#multiselect_btn__agree").prop('textContent', "Select channels");
+      }
+      else {
+        $("#multiselect_btn__agree").prop('disabled', false);
+        $("#multiselect_btn__agree").prop('textContent', "Confirm " + selectedList.length + " channel(s).");
       }
   });
  
