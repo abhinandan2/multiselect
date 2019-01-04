@@ -5,6 +5,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   background-color:#fafafa;
+  overscroll-behavior: none;
+
 }
 a {
   color: #b71a4c;
@@ -13,14 +15,104 @@ h1 {
   text-align: center;
 }
 
+*{font-family: 'Roboto', sans-serif;}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 19px;
+  text-align: center;
+  line-height: 25px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+
+.multiselect__radiolist {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  border-top: 1px solid #bfbfbf;
+  vertical-align: middle;
+}
+
+.multiselect__radiolist span {
+  position: relative;
+  top: -30%;
+}
+
 .multiselect_wrapper {
 /*  width: 100%; 
   height: 80%;
-*/}
+*/
+}
 .multiselect_container {
   display: flex;
   margin: 0 auto;
-  height: 80vh;
+  height: 85vh;
   width: 330px;
   border: 1px solid #bfbfbf;
   flex-direction: column;
@@ -101,8 +193,17 @@ h1 {
   width: 100%;
 }
 
+.multiselect__alert {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 0.85rem;
+  padding-right: 2.7rem;
+  font-size: 0.95rem;
+
+}
+
 .multiselect--li{
-  padding: 14px 0 14px 0;
+  padding: 11px 0 11px 0;
   border-bottom: 1px solid lightgrey;
   -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
@@ -123,6 +224,45 @@ h1 {
   z-index: 2;
   transition: color 200ms ease-in;
   overflow: hidden;
+  font-size: 1em;
+}
+.multiselect--label-bouquet {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  position: relative;
+  transition: all .1s ease-in;
+  user-select: none;
+  padding: 10px 10px 10px 51px;
+  text-align: left;
+  color: #3c454c;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+
+
+.multiselect--li-bouquet i {
+  margin-right: 10px;
+  margin-left: -20px;
+  /*color: #f35a21;*/
+  color: #afafaf;
+}
+
+.multiselect--bouquet-alert {
+  position: relative;
+  padding: 0.35rem 0;
+  margin-bottom: 0; 
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  margin: auto 0;
+  font-size: 0.85rem;
+  line-height: 1rem;
 }
 
 .multiselect--checkbox {
@@ -138,17 +278,48 @@ h1 {
   visibility: hidden;
 }
 
+.multiselect--title {
+  flex-grow: 1;
+}
+
 .multiselect_buttons {
   display: flex;
+}
+.multiselect__btn-collapse{
+  border: none;
+  background: none;
+  color: #f35a21;
+  transition: all .25s ease;
+  user-select: none;
+  outline: none!important;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  top: 0px;
+}
+
+.multiselect--bouquet:first-child button {
+  /*background-color: rgba(0, 0, 0, 0.05);*/
+  animation: horizontal 0.75s 3 linear alternate;
+}
+
+.multiselect--li-bouquet {
+  border: none;
+  padding: 5px 0 5px 0;
+}
+
+.collapse-open{
+  transform: rotate(45deg);
+  transition: all .25s ease;
 }
 
 .multiselect--price{
   float: right;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 .multiselect_btn__agree{
-  background-color: #21f359;
+  background-color: #029302;
   text-shadow: 0px -2px #21f359;
   flex: 2;
 }
@@ -193,8 +364,10 @@ h1 {
 }
 */
 
-   .multiselect--li label:before {
-     width: 10px;
+
+
+   .multiselect--label:before {
+     width: 10px; 
      height: 10px;
      border-radius: 50%;
      content: '';
@@ -203,11 +376,11 @@ h1 {
      left: 50%;
      top: 50%;
      transform: translate(-50%, -50%) scale3d(1, 1, 1);
-     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+       transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
      opacity: 0;
      z-index: -1;
   }
-   .multiselect--li label:after {
+   .multiselect--label:after {
     width: 25px;
     height: 25px;
      content: '';
@@ -225,14 +398,69 @@ h1 {
      cursor: pointer;
      transition: all 200ms ease-in;
   }
-   .multiselect--li .selected {
+  .multiselect--li .selected {
      color: #fff;
   }
+  .multiselect--li .selected .fa-plus{
+     color: #fff;
+  }
+
    .multiselect--li .selected:before {
      transform: translate(-50%, -50%) scale3d(56, 56, 1);
      opacity: 1;
   }
    .multiselect--li .selected:after {
-     background-color: #21f359;
-     border-color: #21f359;
+     background-color: #f35a21;
+     border-color: #f35a21;
+  }
+
+  .collapse label:before {
+  }
+
+  .collapse label:after {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background: none;
+    border: none;
+    cursor: none;
+
+
+  }
+
+
+  @keyframes horizontal {
+    0% {
+      margin-right: 0;
+    }
+    25% {
+      margin-right: -4px;
+    }
+    50% {
+      margin-right: 0;
+    }
+    75% {
+      margin-right: -4px;
+    }
+    100% {
+      margin-right: 0;
+    }
+  }
+
+  @-webkit-keyframes horizontal {
+    0% {
+      margin-right: 0;
+    }
+    25% {
+      margin-right: -4px;
+    }
+    50% {
+      margin-right: 0;
+    }
+    75% {
+      margin-right: -4px;
+    }
+    100% {
+      margin-right: 0;
+    }
   }
