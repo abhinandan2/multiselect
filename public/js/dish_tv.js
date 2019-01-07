@@ -83,7 +83,8 @@ function FriendlyChat() {
   this.welcomeTypingQuick = {"content":"","customer":"6e07716b-17d6-48e4-aae4-b8dd728acb84","id":"410fb0b0-ee51-45cf-aa2e-31d6fe2c7f15","operator":"idelivr_ai_bot","sender":"idelivr_ai_bot","system_meta":{"customer":"6e07716b-17d6-48e4-aae4-b8dd728acb84","timestamp":(new Date).getTime(),"path":"active_conversation","last":true},"timestamp":(new Date).getTime(),"type":"typing"};
    // this.welcomeMessageOne = "Welcome to Phonon. \n I'm Yuva, Your personal virtual assistant.";
   // this.welcomeQuick = {"content":"{\"recipient\":{\"id\":\"7a45025a-f2e8-4449-8354-3819146aae95\"},\"message\":{\"text\":\"Welcome to Yatra. \\n I'm Yuva, Your personal virtual assistant. \\nI am here to help you book meals and excess baggage for your upcoming flight.\",\"quick_replies\":[{\"content_type\":\"text\",\"title\":\"Start Chat\",\"payload\":\"start_chat\"}]}}","conversation_id":"ZZZ","customer":"7a45025a-f2e8-4449-8354-3819146aae95","from_operator":1,"id":"5b1325bc-26c9-4389-98a5-5f49c6cbbf7f","is_processed":"redis","is_reached":1,"operator":"idelivr_ai_bot","origin":"widget","read":1502803457716,"sender":"idelivr_ai_bot","sent":1502803457356,"sessionID":"9e7e4fb3-c150-4099-8a70-848b7496cdab","system_meta":{"customer":"7a45025a-f2e9-4449-8354-3819146aae95","timestamp":1502803457356},"timestamp":1502803457356,"type":"template","freeText":true}
-  this.welcomeQuick = {"content":"{\"recipient\":{\"id\":\"7a45025a-f2e8-4449-8354-3819146aae95\"},\"message\":{\"text\":\"Welcome to Dish TV Assist! \",\"quick_replies\":[{\"content_type\":\"text\",\"title\":\"IVR Menu_action\",\"payload\":\"start_chat\"}]}}","conversation_id":"ZZZ","customer":"7a45025a-f2e8-4449-8354-3819146aae95","from_operator":1,"id":"5b1325bc-26c9-4389-98a5-5f49c6cbbf7f","is_processed":"redis","is_reached":1,"operator":"idelivr_ai_bot","origin":"widget","read":(new Date).getTime(),"sender":"idelivr_ai_bot","sent":(new Date).getTime(),"sessionID":"9e7e4fb3-c150-4099-8a70-848b7496cdab","system_meta":{"customer":"7a45025a-f2e9-4449-8354-3819146aae95","timestamp":(new Date).getTime()},"timestamp":(new Date).getTime(),"type":"template","freeText":true}
+
+  this.welcomeQuick = {"content":"{\"recipient\":{\"id\":\"7a45025a-f2e8-4449-8354-3819146aae95\"},\"message\":{\"text\":\"Welcome to Dish TV Assist. \",\"quick_replies\":[{\"content_type\":\"text\",\"title\":\"IVR Menu\",\"payload\":\"start_chat\"}]}}","conversation_id":"ZZZ","customer":"7a45025a-f2e8-4449-8354-3819146aae95","from_operator":1,"id":"5b1325bc-26c9-4389-98a5-5f49c6cbbf7f","is_processed":"redis","is_reached":1,"operator":"idelivr_ai_bot","origin":"widget","read":(new Date).getTime(),"sender":"idelivr_ai_bot","sent":(new Date).getTime(),"sessionID":"9e7e4fb3-c150-4099-8a70-848b7496cdab","system_meta":{"customer":"7a45025a-f2e9-4449-8354-3819146aae95","timestamp":(new Date).getTime()},"timestamp":(new Date).getTime(),"type":"template","freeText":true}
   // this.welcomeUpload = {"content":"{\"recipient\":{\"id\":\"7a45025a-f2e8-4449-8354-3819146aae96\"},\"message\":{\"text\":\"Please upload your PAN\",\"quick_replies\":[{\"content_type\":\"upload\",\"title\":\"Upload PAN\",\"payload\":\"upload_pan\"}]}}","conversation_id":"ZZZ","customer":"7a45025a-f2e8-4449-8354-3819146aae96","from_operator":1,"id":"5b1325bc-26c9-4389-98a5-5f49c6cbbf7g","is_processed":"redis","is_reached":1,"operator":"idelivr_ai_bot","origin":"widget","read":1502803457717,"sender":"idelivr_ai_bot","sent":1502803457357,"sessionID":"9e7e4fb3-c150-4099-8a70-848b7496cdac","system_meta":{"customer":"7a45025a-f2e9-4449-8354-3819146aae96","timestamp":1502803457357},"timestamp":1502803457357,"type":"template","freeText":true}
   this.messageList = document.getElementById('idelivr_messages');
   this.footerPanel = document.getElementById('idelivr_footers');
@@ -97,7 +98,7 @@ function FriendlyChat() {
   // this.defaultURL = 'https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/phononicon.png';
   // this.defaultURL = 'https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/apple-touch-icon.png';
   //NAMAN CHANGES 
-  this.defaultURL = 'https://s3.ap-south-1.amazonaws.com/chatwidget/dishtv/Dish_tv.png';
+  this.defaultURL = window.location.host + '/others/bot-icon.png';
 
   this.chatWindow = document.getElementById('idelivr_chat_window_1');
 
@@ -711,7 +712,7 @@ FriendlyChat.resetMaterialTextfield = function(element) {
 FriendlyChat.MSG_TEMPLATE =
 '<div class="idelivr-msg_container idelivr-base_receive">' +
 '<div class="idelivr-avatar">' +
-'<img id="a" src="https://s3.ap-south-1.amazonaws.com/chatwidget/dishtv/Dish_tv.png" class="idelivr-img-responsive">' +
+'<img id="a" src="/others/bot-icon.png" class="idelivr-img-responsive">' +
 '</div>' +
 '<img src="https://s3.ap-south-1.amazonaws.com/chatwidget/lighting.gif" class="idelivr-gif-responsive">' +
 '<div class="idelivr-messages idelivr-msg_receive">' +
@@ -1142,8 +1143,8 @@ FriendlyChat.prototype.displayQuick = function(user, key, val) {
     var div = document.createElement("div");
 
     // div.class = "quick-button";
-    if(payloadContent == "Start Chat"){
-      payloadContent = "Start Chat_action"
+    if(payloadContent == "IVR Menu"){
+      payloadContent = "IVR Menu_action"
     }
     div.innerHTML = payloadContent;
 
@@ -1337,20 +1338,19 @@ FriendlyChat.prototype.displayQuick = function(user, key, val) {
                       <div class="multiselect--filter">
                         <input type="text" id="multiselect--filter" class="multiselect--filter-input" placeholder="Filter"/>
                       </div>
-                      <div class="alert alert-warning alert-dismissible fade show multiselect__alert" role="alert">
+			<div class="alert alert-warning alert-dismissible fade show multiselect__alert" role="alert">
                         Hey there! You can select any channel by tapping on it or select the whole pack for a special discount!
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
-                      
                       <ul class="multi-selected" id="ul">
                       </ul>
                     </form>
                   </div>
 
-
-                  <div class="multiselect__radiolist">
+		
+ <div class="multiselect__radiolist">
                     <label class="multiselect__radio-label">
                       <input type="radio" class="option-input radio" name="radio" checked=""><span>SD</span></label>
                     <label>
@@ -1358,8 +1358,9 @@ FriendlyChat.prototype.displayQuick = function(user, key, val) {
                     <label>
                       <input type="radio" class="option-input radio" name="radio"><span>Both</span></label>
                   </div>
+
                   <div class="multiselect_footer">
-                    <h4>Please choose your choice of channels.</h4>
+                    <p>Please choose your choice of channels.</p>
                     <div class="multiselect_buttons">
                       <button id="multiselect_btn__agree" disabled="true" class="multiselect_btn multiselect_btn__agree" ><span>Confirm</span></button>
                     </div>

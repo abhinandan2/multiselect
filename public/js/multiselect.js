@@ -15,75 +15,76 @@ var json = [
    code: 'DUMMY',
    price: 10,
  }
- // ,{
- //   title: 'NGC Music HD',
- //   code: 'DUMMY',
- //   price: 5,
- // },{
- //   title: 'TLC HD World',
- //   code: 'DUMMY',
- //   price: 10,
- // },{
- //   title: 'Travel XP HD',
- //   code: 'DUMMY',
- //   price: 19,
- // },{
- //   title: 'Baby tv HD',
- //   code: 'DUMMY',
- //   price: 9,
- // },{
- //   title: 'CNBC PRIME HD',
- //   code: 'DUMMY',
- //   price: 15,
- // },{
- //   title: 'Nick HD +',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Axn HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Colors Infinity HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Comedy Central HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'MN+ HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'ROMEDY NOW HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Sony PIX HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Star Movies HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Star Movies Select HD',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Sony MAX',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Zee Cinema',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
- //   title: 'Star Gold',
- //   code: 'DUMMY',
- //   price: 25,
- // },{
+ ,{
+   title: 'NGC Music HD',
+   code: 'DUMMY',
+   price: 5,
+ },{
+   title: 'TLC HD World',
+   code: 'DUMMY',
+   price: 10,
+ },{
+   title: 'Travel XP HD',
+   code: 'DUMMY',
+   price: 19,
+ },{
+   title: 'Baby tv HD',
+   code: 'DUMMY',
+   price: 9,
+ },{
+   title: 'CNBC PRIME HD',
+   code: 'DUMMY',
+   price: 15,
+ },{
+   title: 'Nick HD +',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Axn HD',
+   code: 'DUMMY',
+   price: 15,
+ },{
+   title: 'Colors Infinity HD',
+   code: 'DUMMY',
+   price: 5,
+ },{
+   title: 'Comedy Central HD',
+   code: 'DUMMY',
+   price: 20,
+ },{
+   title: 'MN+ HD',
+   code: 'DUMMY',
+   price: 10,
+ },{
+   title: 'ROMEDY NOW HD',
+   code: 'DUMMY',
+   price: 10,
+ },{
+   title: 'Sony PIX HD',
+   code: 'DUMMY',
+   price: 5,
+ },{
+   title: 'Star Movies HD',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Movies Select HD',
+   code: 'DUMMY',
+   price: 15,
+ },{
+   title: 'Sony MAX',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Zee Cinema',
+   code: 'DUMMY',
+   price: 25,
+ },{
+   title: 'Star Gold',
+   code: 'DUMMY',
+   price: 25,
+ },
+ // {
  //   title: 'UTV Movies',
  //   code: 'DUMMY',
  //   price: 25,
@@ -395,7 +396,7 @@ var json = [
       li.innerHTML = `<label name="` + currentValue.title + `" class="multiselect--label input-group"><input  type="checkbox" class="multiselect--checkbox" name="` + currentValue.title + `" value="` + currentValue.code + `"><span class="multiselect--title">` + currentValue.title +  `</span><span class="multiselect--price">₹ ` + currentValue.price + `</span></input>
          <button class="input-group-append multiselect__btn-collapse" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-plus"></i></button></label>
          <div class="collapse" id="collapseExample">
-         <ul style="margin-left: 20px;">
+         <ul">
             <li class="multiselect--li-bouquet"><label name="Zee life HD" class="multiselect--label-bouquet"><i class="fas fa-arrow-alt-circle-right"></i><span class="multiselect--title">Zee life HD</span></label></li>
             <li class="multiselect--li-bouquet"><label name="Fox news HD" class="multiselect--label-bouquet"><i class="fas fa-arrow-alt-circle-right"></i><span class="multiselect--title">Zee News HD</span></label></li>
          </ul></div>
