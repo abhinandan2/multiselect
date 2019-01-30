@@ -7,7 +7,7 @@
   height: 100%!important;
   width: 400px;
   box-shadow: 0 5px 40px rgba(0,0,0,.16)!important;
-  background-color: #FFFFFF;
+  background-color: #f4f7f9;
 }
 
 .idelivr-chat-window {
@@ -273,7 +273,8 @@
   /* min-height: 120px!important;*/
   /*    max-height: 430px!important;*/
   height: calc(100% - 90px);
-  background: url("https://s3.ap-south-1.amazonaws.com/chatwidget/yatra/chat_BG.png");
+  background-image: url("https://s3.ap-south-1.amazonaws.com/chatwidget/yatra/chat_BG.png");
+  background-color: #fff;
   padding: 0;
   overflow-x: hidden;
 }
@@ -304,9 +305,12 @@
   color: #fff;
   background-color: #f7f7f9;
   border-color: #ddd;
-  background: url(https://s3.ap-south-1.amazonaws.com/chatwidget/dishtv/DishtTV-header.png);
-  background-size: 400px 62px;
-  background-position-y: -4px;
+  background: url(https://s3.ap-south-1.amazonaws.com/chatwidget/dishtv/header3.png);
+  background-size: 400px 54px;
+  /*background-position-y: --4px;*/
+  background-position-x: right;
+  background-color: #ef4623;
+  background-repeat: no-repeat;
 }
 
 .idelivr-chat-avatar {
@@ -330,11 +334,11 @@
 
 .idelivr-panel-title {
   position: absolute;
-  top: 0;
+  top: 2px;
   width: 100%;
   font-size: 18px;
   color: white;
-  font-weight: 700;
+  font-weight: 500;
   display: block;
   -webkit-margin-before: 0.7em;
   -webkit-margin-after: 1em;

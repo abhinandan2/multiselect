@@ -5,6 +5,8 @@
     <title>Dish Tv</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <script>
         idelivrCallback = function() {
             // idelivr.mobile('1234567890');
@@ -21,14 +23,8 @@
         }
     </script>
 
-
-  <!-- Favicon -->
-    <!--   <link rel="apple-touch-icon" sizes="180x180" href="https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/favicon-16x16.png">     
-    <link rel="mask-icon" href="https://s3.ap-south-1.amazonaws.com/chatwidget/phonon/safari-pinned-tab.svg" color="#5bbad5"> <meta name="msapplication-TileColor" content="#2d89ef"> <meta name="theme-color" content="#ffffff"> -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://s3.ap-south-1.amazonaws.com/chatwidget/dishtv/dish_favicon.png">
-  <!-- /Favicon -->
+
   
   <!-- 3rd Part Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
@@ -45,11 +41,11 @@
     <link rel="stylesheet" href="css/jquery.seat-charts.css">
     <link rel="stylesheet" type="text/css" href="css/dish_tv.css">
     <link rel="stylesheet" type="text/css" href="css/calendarLibrary.css">
-    <link rel="stylesheet" type="text/css" href="css/flifo.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/flifo.css"> -->
     <link rel="stylesheet" type="text/css" href="css/carousal_aviation.css">
     <link rel="stylesheet" type="text/css" href="css/seat_card.css">
     <link rel="stylesheet" type="text/css" href="css/seat_booking.css">
-    <link rel="stylesheet" type="text/css" href="css/tandc.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/tandc.css"> -->
     <link rel="stylesheet" type="text/css" href="css/multiselect.css">
     <link rel="stylesheet" type="text/css" href="css/cart.css">
 
@@ -90,7 +86,7 @@
             </div>
             <div class="idelivr-panel-footer" id="idelivr_footers">
                 <form id="idelivr_message-form" action="#" class="idelivr-footer-form">
-                      <textarea id="idelivr_message" rows="2" placeholder="Type your message here..."></textarea>
+                      <textarea id="idelivr_message" rows="2"></textarea>
                       <div class="idelivr-options">
                           <!-- <label for="idelivr-filepicker">
                               <img class="idelivr-paperclip" src="https://s3.ap-south-1.amazonaws.com/chatwidget/wealthy/paper.png">
@@ -107,24 +103,26 @@
       <!-- <div class="idelivr-launcher-close-icon"></div> -->
     <!-- </div> -->
 </body>
-    <script src="./js/jquery.js"></script>
-    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.138.0.min.js"></script>
-    <!-- <script src="js/carousal_test.js"></script> -->
-    <script src="js/calendarLibrary.js"></script>
-    <script src="js/flifo.js"></script>
-    <script src="js/carousal_aviation.js"></script>
-    <script src="./js/seat_booking.js"></script>
-    <script src="./js/tandc.js"></script>
-    <script src="./js/dish_tv.js"></script>
-    <script src="./js/cart.js"></script>
-    <script src="./js/multiselect.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-    <script src='https://code.jquery.com/jquery-1.11.1.min.js'></script>
-    <script src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
-    <script src="js/jquery.seat-charts.js"></script>  
+
   <!-- 3rd Party JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   <!-- 3rd Party JS -->
+    <script src="./js/jquery.js"></script>
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.138.0.min.js"></script>
+    <!-- <script src="js/carousal_test.js"></script> -->
+    <script src="js/calendarLibrary.js"></script>
+    <!-- <script src="js/flifo.js"></script> -->
+    <script src="js/carousal_aviation.js"></script>
+    <script src="./js/seat_booking.js"></script>
+    <!-- <script src="./js/tandc.js"></script> -->
+    <script src="./js/dish_tv.js"></script>
+    <!-- <script src="./js/cart.js"></script> -->
+    <script src="./js/multiselect.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://code.jquery.com/jquery-1.11.1.min.js'></script>
+    <script src='https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js'></script>
+    <script src="js/jquery.seat-charts.js"></script>  
+
 </html>

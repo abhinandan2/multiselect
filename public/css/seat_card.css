@@ -1,4 +1,4 @@
-.card {
+.idelivr-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
@@ -7,13 +7,13 @@
   background: white;
 }
 
-.price {
+.idelivr-price {
   color: grey;
   font-size: 19px;
   margin: 0;
 }
 
-.card button {
+.idelivr-card button {
   border: none;
   outline: 0;
   padding: 12px;
@@ -25,12 +25,12 @@
   font-size: 18px;
 }
 
-.card button:hover {
+.idelivr-card button:hover {
   opacity: 0.7;
 }
 
 
-.card-wrapper {
+.idelivr-card-wrapper {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -51,7 +51,7 @@
 
 }
 
-.header{
+.idelivr-header{
     font-family: 'Pacifico','Lato','Times New Roman', Times, serif;
     font-size: x-large;
     font-style: oblique;
@@ -61,7 +61,7 @@
     margin-top: -10px;
 }
 
-.header-background {
+.idelivr-header-background {
     height: 55px;
     position: absolute;
     top: 0;
@@ -71,7 +71,7 @@
     z-index: -1;
 }
 
-.footer{
+.idelivr-footer{
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -83,7 +83,7 @@
     height: 20%;
 }
 
-.seat-text {
+.idelivr-seat-text {
     font-family: 'Lato', 'Heltevica', 'monotype';
     margin: 10px;
     width: 70%;
@@ -98,7 +98,7 @@
     background-clip: text;
     -webkit-text-fill-color: transparent; */
 }
-.seat-button {
+.idelivr-seat-button {
     font-family: 'Lato','Courier New', Courier, monospace;
     width: 30%;
     position: relative;
@@ -117,7 +117,7 @@
 
 
 /* The Modal (background) */
-.modal {
+.idelivr-modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -133,13 +133,12 @@
 
 
 /* Modal Content */
-.modal-content {
+.idelivr-modal-content {
     position: relative;
     background-color: #fefefe;
     margin: auto;
     padding: 0;
     width: 90%;
-    height: 98%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -149,6 +148,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 10px;
+    height: 90vh;
 }
 
 
@@ -164,7 +164,7 @@
 }
 
 /* The Close Button */
-.modal-close {
+.idelivr-modal-close {
     color: darkred;
     float: right;
     font-size: 28px;
@@ -174,26 +174,25 @@
     display: none;
 }
 
-.close:hover,
-.close:focus {
+.idelivr-close:hover,
+.idelivr-close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
 
-.modal-header {
-    display: flex;
-    padding: 0.4rem;
+.idelivr-modal-header {
+    /* display: flex; */
     color: white;
-    background-color: #ff44449c;
-    font-family: 'Lato';
+    /* background-color: #ff44449c; */
+    /* font-family: 'Lato'; */
     background-image: linear-gradient(-20deg,#f35a21 0,#fd2121 100%);
-    background-size: contain;
+    /* background-size: contain; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    padding: 0.5rem;
 }
-.modal-header-title {
-    margin: 8px;
+.idelivr-modal-header-title {
     text-align: center;
     flex-grow: 1;
     align-self: center;
@@ -202,11 +201,12 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.2em;
+    margin: 0;
 }
 
-.modal-body {padding: 2px 16px;}
+.idelivr-modal-body {padding: 2px 16px;}
 
-.modal-footer {
+.idelivr-modal-footer {
     padding: 2px 16px;
     background-color: #5990da;
     color: white;
@@ -215,14 +215,14 @@
     background-image: linear-gradient(-20deg,#f35a21 0,#fd2121 100%);;
 }
 
-.modal-footer-title{
+.idelivr-modal-footer-title{
     margin: 8px;
     text-align: center;
     flex-grow: 1;
     align-self: center;
 }
 
-.iframe {
+.idelivr-iframe {
     height: 100%;
     width: 100%;
     border: none;
